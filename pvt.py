@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from lib.pvtv2 import pvt_v2_b2
+from pvtv2 import pvt_v2_b2
 import os
 import torch
 import torch.nn as nn
@@ -21,6 +21,7 @@ class BasicConv2d(nn.Module):
     def forward(self, x):
         x = self.conv(x)
         x = self.bn(x)
+        # x = self.relu(x)
         return x
 
 
